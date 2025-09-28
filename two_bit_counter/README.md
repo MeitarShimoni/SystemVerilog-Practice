@@ -16,12 +16,12 @@ This project served as a hands-on exercise for the following fundamental concept
     * `$display` is used for single, event-based messages, acting like a snapshot 📸 to print information at a specific point in time (e.g., "Test finished").
     * `$monitor` is used for continuous signal tracing, acting like a live feed 📹 that automatically prints a message whenever a watched signal's value changes.
 
-## Future Work
-
-The current design is a fixed 2-bit counter. A key improvement would be to parameterize the module's width. By using a `parameter` for the bit-width, the same module could be instantiated as a 4-bit, 8-bit, or N-bit counter, making the design significantly more reusable.
-
 ## Simulation Waveform
 
 The following waveform shows the counter resetting to `00`, then incrementing on each positive clock edge while `enable` is high. The count correctly wraps from `11` back to `00`.
 
 ![Counter Waveform](waveform.png)
+
+## Future Work
+
+The current design is a fixed 2-bit counter. A key improvement would be to parameterize the module's width. By using a `parameter` for the bit-width, the same module could be instantiated as a 4-bit, 8-bit, or N-bit counter, making the design significantly more reusable.
